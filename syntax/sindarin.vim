@@ -72,7 +72,7 @@ syn keyword sindarinSettings circe2_design circe2_file circe2_polarized
 " GOSAM + NLO
 syn keyword sindarinSettings use_gosam_loops use_gosam_correlations use_gosam_real_trees alpha_power alphas_power combined_nlo_integration
 " POWHEG
-syn keyword sindarinSettings powheg_pt_min powheg_grid_sampling_points powheg_grid_size_xi powheg_grid_size_y powheg_matching
+syn keyword sindarinSettings powheg_grid_sampling_points powheg_grid_size_xi powheg_grid_size_y powheg_lambda powheg_matching powheg_pt_min
 
 "===================="
 "  linking keywords  "
