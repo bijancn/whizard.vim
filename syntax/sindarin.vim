@@ -46,7 +46,7 @@ syn keyword sindarinFunction  abs ceiling floor sgn mod modulo max min
 syn keyword sindarinType cmplx int logical real stable unpolarized unstable
 syn keyword sindarinStatement clear compile as integrate simulate show echo exec expect include
 syn keyword sindarinStatement if then else end read_slha compile_analysis write_analysis
-syn keyword sindarinStatement alias histogram plot process record scan combine eval nextgroup=sindarinProc skipwhite
+syn keyword sindarinStatement alias histogram plot process record scan rescan combine eval nextgroup=sindarinProc skipwhite
 syn match sindarinProc "\%(\%(alias\|histogram\|plot\|process\|record\|scan\)\s*\)\@<=\h\%(\w\|\.\)*" contained
 
 setlocal iskeyword+=_
@@ -54,7 +54,11 @@ syn keyword sindarinBuiltin epsilon range real_precision results
 syn keyword sindarinFormats ascii athena debug hepevt hepmc lha lhef long mokka short stdhep stdhep_up
 syn keyword sindarinBeamstructure circe1 circe2 pdf_builtin lhapdf user_strfun
 
-syn keyword sindarinSettings analysis analysis_filename auto_decays beams beams_momentum channel_weights_power check_events_file check_grid_file checkpoint cuts description diagonal_decay diags diags_color fatal_beam_decay isotropic_decay iterations keep_beams label library luminosity model n_calls_test negative_weights n_events observable out_file physical_unit rebuild rebuild_events recompile restrictions safety_factor sample sample_format sample_normalization scale seed slha_read_decays sqrts tolerance unweighted update_event update_sqme update_weight
+syn keyword sindarinSettings analysis analysis_filename auto_decays beams beams_momentum channel_weights_power check_events_file check_grid_file checkpoint cuts description diagonal_decay diags diags_color fatal_beam_decay isotropic_decay keep_beams label library luminosity model n_calls_test negative_weights n_events observable openmp_num_threads out_file physical_unit rebuild rebuild_events read_raw recompile restrictions safety_factor scale seed slha_read_decays sqrts tolerance unweighted update_event update_sqme update_weight write_raw
+" Integration
+syn keyword sindarinSettings accuracy_goal error_goal error_threshold relative_error_goal iterations
+" Samples
+syn keyword sindarinSettings sample sample_format sample_normalization sample_pacify
 " Extensions
 syn keyword sindarinSettings extension_ascii extension_ascii_long extension_ascii_short extension_debug extension_hepevt extension_hepmc extension_lhef
 " VAMP and phasespace
@@ -62,7 +66,7 @@ syn keyword sindarinSettings check_phs_file use_vamp_equivalences vis_channels v
 " alpha_s
 syn keyword sindarinSettings alphas alpha_s_is_fixed alpha_s_from_mz alpha_s_from_lambda_qcd alpha_s_order
 " Plotting
-syn keyword sindarinSettings draw_curve draw_histogram draw_options gmlcode_fg title n_bins x_label x_log x_min x_max y_label y_min y_max y_log
+syn keyword sindarinSettings draw_curve draw_histogram draw_options err_options gmlcode_fg title n_bins x_label x_log x_min x_max y_label y_min y_max y_log
 " Shower and hadronization
 syn keyword sindarinSettings allow_shower hadronization_active mlm_Rmin mlm_etamax mlm_matching mlm_nmaxMEjets mlm_ptmin muli_active ps_PYTHIA_PYGIVE ps_fsr_active ps_isr_active ps_isr_only_onshell_emitted_partons ps_isr_primordial_kt_width ps_isr_pt_ordered ps_isr_tscalefactor ps_mass_cutoff ps_max_n_flavors ps_use_PYTHIA_shower ps_fsr_lambda ps_isr_lambda
 " CIRCE1
